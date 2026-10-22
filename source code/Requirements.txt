@@ -1,0 +1,21 @@
+# External Requirements
+
+To get the full functionality of **Hardware Monitor**, you need to install the following external tools. Without them, some features will show `N/A` or `0W`.
+
+## 1. RivaTuner Statistics Server (RTSS)
+**Purpose:** Required for the **FPS Counter** and the in-game OSD overlay.
+**Why?** Windows does not provide a native way to read game frame rates. RTSS creates a shared memory that this app reads from.
+
+**How to install:**
+1. Download RTSS from [Guru3D](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html).
+2. Install it and keep it running in the background (it will minimize to the system tray).
+3. The app will automatically detect it and show FPS.
+
+## 2. PawnIO Driver
+**Purpose:** Required for reading **CPU Power (Watts)**.
+**Why?** Modern Windows versions block direct access to CPU power sensors for security. PawnIO is a safe driver that bridges this gap.
+
+**How to install:**
+1. Open Command Prompt (CMD) as Administrator and run:
+   ```bash
+   winget install PawnIO
